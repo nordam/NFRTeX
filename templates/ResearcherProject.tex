@@ -1,0 +1,131 @@
+\documentclass[a4paper,11pt,english]{article}
+\input{preamble.tex}
+\newcommand{\scs}{\scriptsize}
+
+
+% Title of your project. Does not have to be two lines, or include acronym.
+\title{ \vspace{-1.5cm}SNAPPY ACRONYM\\ Long descriptive title}
+\begin{document}
+
+% It may be convenient, for overview, to have a table of contents on a separate page while writing
+\tableofcontents
+\pagebreak
+
+
+\maketitle
+\vspace{-2.cm}
+
+\section{Excellence}
+
+Adding a citation here, as an example \citep{einstein1906theorie}.
+
+
+\subsection{State of the art, knowledge needs and project objectives}
+
+\subsubsection{State of the art}
+
+\subsubsection{Knowledge Needs}
+
+\subsubsection{Project objectives}
+
+\subsection{Research questions and hypotheses, theoretical approach and methodology}
+
+\subsubsection{Research questions and hypotheses}
+
+We have many exciting questions.
+
+To answer these questions, we have formulated a set of hypotheses which the
+project will test:
+\begin{itemize}
+    \item[\bf H1] Exciting hypothesis number 1.
+    \item[\bf H2] Exciting hypothesis number 1.
+\end{itemize}
+
+
+
+\subsubsection{Theoretical approach and methodology}
+
+\subsection{Novelty and ambition}
+
+
+\section{Impact}
+
+
+\subsection{Potential for academic impact of the research project}
+
+
+
+\subsection{Potential for societal impact of the research project}
+
+
+
+\subsection{Measures for communication and exploitation}
+
+
+\section{Implementation}
+
+\subsection{Project manager and project group}
+
+
+\subsection{Project organisation and management}
+
+
+\subsubsection{WP1 -- Workpackage title}
+
+The first work package will do many interesting things.
+
+{\bf Tasks and deliverables}
+\begin{itemize}
+    \item[\bf T1-1] The first task.
+    \item[\bf D1-2] The first deliverable.
+\end{itemize}
+
+
+\begin{figure}
+    \centering
+\begin{ganttchart}[
+     inline,
+     y unit title=0.45cm,
+     y unit chart=0.32cm,
+     x unit=0.32cm,
+     title height=1,
+     vgrid,hgrid,
+     bar label font = \footnotesize,
+     milestone label font = \footnotesize,
+    ]{1}{39}
+    \gantttitle{2021}{6} \gantttitle{2022}{12} \gantttitle{2023}{12} \gantttitle{2024}{9}\\
+    \gantttitle{Q3}{3} \gantttitle{Q4}{3}
+    \gantttitle{Q1}{3} \gantttitle{Q2}{3} \gantttitle{Q3}{3} \gantttitle{Q4}{3}
+    \gantttitle{Q1}{3} \gantttitle{Q2}{3} \gantttitle{Q3}{3} \gantttitle{Q4}{3}
+    \gantttitle{Q1}{3} \gantttitle{Q2}{3} \gantttitle{Q3}{3}\\
+
+    %%%% WP1 %%%%
+    \ganttgroup[inline=false]{WP1}{2}{24}
+    \ganttbar[bar inline label node/.style={right=-1mm}]{\scs {\bf AA}}{40}{39} \\
+    \ganttbar[inline=false]{T1-1}{2}{12}
+    \ganttbar[bar inline label node/.style={right=-1mm}]{\scs {\bf AA}, BB, PhD}{40}{39} \\
+
+    % Annual meetings
+    \ganttmilestone[inline=false]{M 1-4}{1}
+    \ganttmilestone[inline=false]{}{13}
+    \ganttmilestone[inline=false]{}{25}
+    \ganttmilestone[inline=false]{}{37}\\
+
+    %%%% PhD %%%%
+    \ganttgroup[inline=false]{PhD}{2}{37} \\
+
+\end{ganttchart}
+    \caption{Timeline of the project, including WPs and tasks as described in
+    Section 3.2. Key personnel have been indicated by initials, with WP/Task
+    lead in bold. M 1-4 are annual meetings with all participants.}
+    \label{fig:gantt}
+\end{figure}
+
+
+\footnotesize
+\bibliography{references}
+
+\end{document}
+
+
+% vim: textwidth=100

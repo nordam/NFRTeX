@@ -1,0 +1,53 @@
+\usepackage[font=small]{caption}
+\usepackage[hyphens]{url}
+\usepackage{amsmath}
+\usepackage{pgfgantt}
+\usepackage{microtype}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+% Use a fairly compact bibliography style
+\usepackage{natbib}
+\bibliographystyle{compact_authoryear}
+\setcitestyle{authoryear}
+\def\bibfont{\footnotesize}
+
+
+% The official template specifies 2 cm margins
+\usepackage[margin=2cm]{geometry}
+
+% Use siunitx for typesetting numbers with units, to get consistent spacing and so on
+% For example; \SI{2}{\kilo\meter}
+\usepackage{siunitx}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+\setlist[itemize]{itemsep=-2pt, topsep=2pt, leftmargin=3.5em}
+\setlist[enumerate]{itemsep=-2pt, topsep=2pt, leftmargin=3.5em}
+
+% Format the titles a bit more compactly than standard
+\usepackage{titlesec}
+\titleformat{\section}{\large\bf}{\thesection}{1em}{}
+\titleformat{\subsection}{\bf}{\thesubsection}{1em}{}
+%\titleformat{\subsubsection}[runin]{\bf}{}{0em}{}[:\,]
+\titleformat{\subsubsection}{\bf}{}{0em}{}
+\titlespacing*{\section}
+{0pt}{2.5ex plus 1ex minus .2ex}{1.0ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{1.5ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+\titlespacing*{\subsubsection}
+{0pt}{1.5ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+
+% Can't at present recall what this does
+% ADD THE FOLLOWING COUPLE LINES INTO YOUR PREAMBLE
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 0.3ex}
+}
+
+% Tell LaTeX not to insert a hyphen in the word SINTEF
+\hyphenation{SINTEF}
+
+% Leaving these fields empty
+\author{}
+\date{}
